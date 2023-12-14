@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Arindam Majee"
   avatar           : "arindam_majee.jpg"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : # "Your biography for the left-hand sidebar"
+  location         : "Kolkata, India"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=sqGrHcoAAAAJ&hl=en&oi=ao"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
