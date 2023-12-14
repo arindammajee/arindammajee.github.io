@@ -12,7 +12,7 @@ I am a Project Assistant in the [Institute of Advancing Intelligence](https://ww
 
 Earlier I completed my Bachelor of Engineering with First Class Distinction with Honours in Electronics and Telecommunication Engineering from Jadavpur University, Kolkata (QS rank: 601-650, NIRF rank: 4) under the guidance of [Prof. Amit Konar](https://scholar.google.co.in/citations?user=s1F23CAAAAAJ&hl=en) and [Dr. Pratyusha Rakshit](https://scholar.google.co.in/citations?user=00rPoQEAAAAJ). My undergraduate thesis was on object tracking using reinforcement learning from 2D videos. During my undergraduate degree, I also got the opportunity to work on a variety of exciting projects as a research intern at Robotics, Mechatronics, and Automation Laboratory (RMAL), Toronto Metropoliton University, sponsored by MITACS. .
 
-I am always up for new collaborations, drop me an email at [mailto:majeearindam06072002@gmail.com](majeearindam06072002[@]gmail[dot]com) if you want to chat!
+I am always up for new collaborations, drop me an email at [majeearindam06072002[@]gmail[dot]com](mailto:majeearindam06072002@gmail.com) if you want to chat!
 
 ## Recent News
 
