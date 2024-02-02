@@ -10,7 +10,7 @@ redirect_from:
 
 I am a SDE-I at Amazon India, Bangalore.
 
-Earlier I was a Project Assistant in the [Institute of Advancing Intelligence](https://www.tcgcrest.org/institutes/iai/) at [The Chatterjee Group Centre for Research & Education in Science & Technology (TCG CREST)](https://www.tcgcrest.org/ where I worked with [Prof. Swagatam Das](https://www.isical.ac.in/~swagatam.das/).
+Earlier I was a Project Assistant in the [Institute of Advancing Intelligence](https://www.tcgcrest.org/institutes/iai/) at [The Chatterjee Group Centre for Research & Education in Science & Technology (TCG CREST)](https://www.tcgcrest.org/), where I worked with [Prof. Swagatam Das](https://www.isical.ac.in/~swagatam.das/).
 
 Before that, I completed my Bachelor of Engineering with First Class Distinction with Honours in Electronics and Telecommunication Engineering from Jadavpur University, Kolkata (QS rank: 601-650, NIRF rank: 4) under the guidance of [Prof. Amit Konar](https://scholar.google.co.in/citations?user=s1F23CAAAAAJ&hl=en) and [Dr. Pratyusha Rakshit](https://scholar.google.co.in/citations?user=00rPoQEAAAAJ). My undergraduate thesis was on object tracking using reinforcement learning from 2D videos. During my undergraduate degree, I also got the opportunity to work on a variety of exciting projects as a research intern at Robotics, Mechatronics, and Automation Laboratory (RMAL), Toronto Metropoliton University, sponsored by MITACS. .
 
