@@ -26,4 +26,4 @@ I am always up for new collaborations, drop me an email at [majeearindam06072002
 - Aug 2022: Completed my virtual internship at Ryerson University, Toronto sponsored by MITACS.
 
 
-This site is under maintainance. Please visit again for an updated version of this.
+$${\color{red}This \space site \space is \space under \space maintainance. \space Please \space visit \space again \space for \space an \space updated \space version \space of \space this.}$$ 
