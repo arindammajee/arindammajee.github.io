@@ -1,0 +1,6 @@
+{
+  "name": "AI Personal Portfolio",
+  "description": "An elegant, modern personal website and portfolio for Arindam Majee, built with React, TypeScript, and Tailwind CSS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
