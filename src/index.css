@@ -7,9 +7,40 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Custom background patterns for clean design */
+html {
+  scroll-behavior: smooth;
+  /* Offset in-page anchor jumps for the sticky header. */
+  scroll-padding-top: 5rem;
+}
+
+/* Custom background pattern for clean design */
 .bg-grid-pattern {
   background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
+/* Consistent, visible keyboard focus across all interactive elements. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Respect users who prefer reduced motion: disable smooth scroll and
+   near-instant animations/transitions. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -2,209 +2,383 @@ import { Profile } from "./types";
 
 export const portfolioData: Profile = {
   name: "Arindam Majee",
-  title: "SDE-I @ Amazon India",
-  tagline: "SDE-I at Amazon India | AI/ML Researcher | Specializing in CV, RL, Robotics, LLMs & Graphs",
-  aboutMe: "Highly proficient Software Development Engineer with 2+ years of experience building and scaling mission-critical, high-throughput automation systems for the world's largest logistics networks. My expertise is centered on distributed systems, optimizing MLOps pipelines, and cloud infrastructure management.",
-  detailedBio: "I am a Software Development Engineer - I (SDE-I) at Amazon India, Bangalore. Earlier, I worked as a Research Assistant in the Institute of Advancing Intelligence at TCG CREST with Prof. Swagatam Das. I graduated with First Class Distinction with Honours in Electronics and Telecommunication Engineering from Jadavpur University, Kolkata. My undergraduate thesis was on object tracking using reinforcement learning from 2D videos under the guidance of Prof. Amit Konar and Dr. Pratyusha Rakshit. During my undergraduate studies, I also conducted robotics research at Toronto Metropolitan University (sponsored by MITACS) and worked as a research intern on diverse intelligent automation projects.",
+  title: "Software Development Engineer · AI Researcher",
+  tagline:
+    "Software engineer and AI researcher working on computer vision, graph learning, efficient ML, and AI for healthcare.",
+
+  // Hero
+  headline: "Building Intelligent Systems for Real-World Impact",
+  subtitle:
+    "Software Development Engineer at Amazon and AI researcher interested in computer vision, graph learning, efficient machine learning, and AI for healthcare.",
+
+  // About — a concise personal story, not a résumé restatement.
+  aboutMe:
+    "I build systems that connect research ideas to real-world impact — from deep learning models for medical diagnosis to production software that operates reliably at large scale. I care most about the point where rigorous methods meet the messy constraints of deployment.",
+  detailedBio:
+    "I'm currently a Software Development Engineer at Amazon, where I work on high-throughput backend systems for large-scale logistics automation. Before industry, I spent several years in research: as a Research Assistant at the Institute of Advancing Intelligence (TCG CREST) with Prof. Swagatam Das, at the Indian Statistical Institute, and on an MITACS-funded robotics project at Toronto Metropolitan University. I studied Electronics & Telecommunication Engineering at Jadavpur University, where my thesis explored reinforcement learning for visual object tracking. My long-term goal is to help build machine learning systems that are efficient, trustworthy, and genuinely useful — especially in domains like healthcare where reliability matters.",
+
   email: "majeearindam06072002@gmail.com",
   location: "Bengaluru, Karnataka, India",
+  resumeUrl: "/Arindam_Majee_Resume.pdf",
+
+  // Legacy flat skills list — retained for backward compatibility / any
+  // future skill-meter view. The rendered Skills section uses skillGroups.
   skills: [
     { name: "Python", category: "Backend", level: "Expert" },
     { name: "C++", category: "Backend", level: "Expert" },
     { name: "Java", category: "Backend", level: "Expert" },
-    { name: "Node.js (Express)", category: "Backend", level: "Advanced" },
     { name: "SQL", category: "Backend", level: "Advanced" },
-    
-    { name: "AWS (AppConfig, CloudWatch)", category: "Tools & Others", level: "Expert" },
-    { name: "Containerization (Docker)", category: "Tools & Others", level: "Expert" },
-    { name: "TensorFlow & PyTorch", category: "Tools & Others", level: "Expert" },
-    { name: "Git & GitHub CI/CD", category: "Tools & Others", level: "Advanced" },
-    { name: "MATLAB", category: "Tools & Others", level: "Advanced" },
-    { name: "Linux", category: "Tools & Others", level: "Advanced" },
-
-    { name: "Distributed Systems", category: "Design", level: "Expert" },
-    { name: "MLOps Pipelines", category: "Design", level: "Expert" },
-    { name: "Computer Vision (CV)", category: "Design", level: "Expert" },
-    { name: "Reinforcement Learning (RL)", category: "Design", level: "Expert" },
-    { name: "Knowledge Graphs", category: "Design", level: "Advanced" },
-    { name: "Robotics & Automation", category: "Design", level: "Advanced" }
+    { name: "PyTorch & TensorFlow", category: "Tools & Others", level: "Expert" },
+    { name: "AWS", category: "Tools & Others", level: "Advanced" },
+    { name: "Docker", category: "Tools & Others", level: "Advanced" },
+    { name: "Computer Vision", category: "Design", level: "Expert" },
+    { name: "Graph Learning", category: "Design", level: "Advanced" },
+    { name: "Reinforcement Learning", category: "Design", level: "Advanced" }
   ],
+
+  // Category-based skills for the redesigned section.
+  skillGroups: [
+    {
+      category: "Programming",
+      items: ["Python", "C++", "Java", "SQL", "MATLAB", "Bash"]
+    },
+    {
+      category: "Machine Learning",
+      items: [
+        "PyTorch",
+        "TensorFlow / Keras",
+        "Computer Vision",
+        "Graph Neural Networks",
+        "Reinforcement Learning",
+        "Model Optimization"
+      ]
+    },
+    {
+      category: "Distributed Systems",
+      items: [
+        "High-throughput services",
+        "Microservices",
+        "Event-driven design",
+        "Concurrency",
+        "System design"
+      ]
+    },
+    {
+      category: "Cloud & Infra",
+      items: ["AWS", "Docker", "CI/CD", "Observability", "Linux"]
+    },
+    {
+      category: "Research",
+      items: [
+        "Deep learning",
+        "Optimization",
+        "Feature selection",
+        "Medical imaging",
+        "Scientific writing"
+      ]
+    },
+    {
+      category: "Developer Tools",
+      items: ["Git & GitHub", "VS Code", "pytest", "NumPy / Pandas", "Weights & Biases"]
+    }
+  ],
+
+  // Featured Work — problem-focused, not employer-focused.
+  featuredWork: [
+    {
+      id: "fw-production",
+      title: "Production Software at Scale",
+      summary:
+        "Design and operation of high-throughput backend services for large-scale logistics automation, built to stay correct and available under heavy, continuous load.",
+      technologies: ["Java", "AWS", "Distributed Systems", "Microservices"],
+      outcome:
+        "Reliable, configurable services running across a large fleet of facilities in production."
+    },
+    {
+      id: "fw-medical",
+      title: "Medical Image Analysis",
+      summary:
+        "Deep learning pipelines for computer-aided diagnosis, including CNN architectures and metaheuristic feature-selection methods applied to MRI, CT, thermal, and ECG data.",
+      technologies: ["PyTorch", "TensorFlow", "CNNs", "Medical Imaging"],
+      outcome: "Two peer-reviewed publications on cardiovascular and cancer detection.",
+      link: {
+        label: "Google Scholar",
+        url: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Arindam+Majee"
+      }
+    },
+    {
+      id: "fw-graph",
+      title: "Graph Representation Learning",
+      summary:
+        "Research on graph neural networks and knowledge graphs — node embeddings, semantic modeling, and reasoning over structured relational data.",
+      technologies: ["Python", "GNNs", "Knowledge Graphs", "Representation Learning"],
+      outcome: "Research conducted at TCG CREST and the Indian Statistical Institute."
+    },
+    {
+      id: "fw-autonomous",
+      title: "Autonomous Systems & RL",
+      summary:
+        "Reinforcement learning agents for visual object tracking and robotic path following, learning control policies directly from video and sensor feedback.",
+      technologies: ["PyTorch", "Reinforcement Learning", "Computer Vision", "Robotics"],
+      outcome:
+        "Undergraduate thesis plus an MITACS-funded robotics collaboration in Canada."
+    },
+    {
+      id: "fw-efficient",
+      title: "Efficient Deep Learning",
+      summary:
+        "Metaheuristic and fractional-calculus-aided optimization (Moth-Flame, Dragonfly) to select compact, informative feature subsets — reducing model size without sacrificing accuracy.",
+      technologies: ["Python", "Optimization", "Feature Selection", "Deep Learning"],
+      outcome: "Published methods improving efficiency of medical classifiers."
+    }
+  ],
+
+  // Research Vision — coherent narrative, set as a statement + a few areas.
+  researchStatement:
+    "I'm drawn to machine learning that has to work outside the lab. Much of modern AI is powerful but brittle, opaque, or too expensive to deploy where it matters most. My interests sit at the intersection of efficiency, trustworthiness, and impact: models that are small and fast enough to run in the real world, transparent enough to be trusted in high-stakes settings like healthcare, and grounded in the structure of the data — whether that structure is visual, relational, or multimodal. Having worked on both sides of the research-to-production gap, I want to keep building AI systems that are not just accurate on benchmarks, but dependable in the hands of the people who use them.",
+  researchAreas: [
+    {
+      id: "ra-trust",
+      title: "Trustworthy AI",
+      description:
+        "Models whose behavior is interpretable, robust, and safe to rely on in high-stakes domains."
+    },
+    {
+      id: "ra-efficient",
+      title: "Efficient Deep Learning",
+      description:
+        "Compression, feature selection, and optimization that make models cheap enough to deploy widely."
+    },
+    {
+      id: "ra-cv",
+      title: "Computer Vision",
+      description:
+        "Learning from images and video, from medical scans to tracking objects in dynamic scenes."
+    },
+    {
+      id: "ra-graph",
+      title: "Graph Representation Learning",
+      description:
+        "Reasoning over relational and structured data with graph neural networks and knowledge graphs."
+    },
+    {
+      id: "ra-multimodal",
+      title: "Multimodal Learning",
+      description:
+        "Combining signals across modalities — vision, structure, and text — into unified representations."
+    },
+    {
+      id: "ra-healthcare",
+      title: "Healthcare AI",
+      description:
+        "Reliable diagnostic tools that assist clinicians while respecting the cost of being wrong."
+    },
+    {
+      id: "ra-prod-ml",
+      title: "Production ML Systems",
+      description:
+        "The engineering that turns a research prototype into a service that runs reliably at scale."
+    }
+  ],
+
   projects: [
     {
       id: "proj-1",
       title: "Alzheimer's Disease Detection from MRI",
-      description: "An AI-based diagnostic assistant using deep learning to identify Alzheimer's disease patterns from brain MRI scans.",
-      longDescription: "Developed an advanced deep learning framework designed to analyze MRI scans for the early and precise detection of Alzheimer's Disease. Leveraging customized 3D Convolutional Neural Network (CNN) architectures, the system extracts subtle structural degeneration markers from brain scans to assist medical professionals in early clinical diagnosis.",
-      technologies: ["Python", "PyTorch", "Deep Learning", "CNN", "Medical Image Processing", "MRI Analysis"],
+      description:
+        "An AI-based diagnostic assistant using deep learning to identify Alzheimer's disease patterns from brain MRI scans.",
+      longDescription:
+        "A deep learning framework that analyzes MRI scans for early detection of Alzheimer's Disease. Using 3D CNN architectures, the system extracts subtle structural degeneration markers to assist clinical diagnosis.",
+      technologies: ["Python", "PyTorch", "3D CNN", "Medical Imaging", "MRI Analysis"],
       featured: true
     },
     {
       id: "proj-2",
-      title: "Line Follower Bot with PID Control",
-      description: "An autonomous robotics platform using proportional-integral-derivative feedback loops for highly stable track following.",
-      longDescription: "Designed and built an autonomous line follower robot utilizing high-frequency Proportional-Integral-Derivative (PID) feedback control. Calibrated infrared sensor arrays and motor controller drivers for smooth navigation around tight curves and varying track conditions. Developed in connection with Jadavpur University.",
-      technologies: ["C++", "PID Tuning", "Arduino", "Robotics", "PID Feedback Control", "Hardware Integration"],
+      title: "RL for Visual Object Tracking",
+      description:
+        "An autonomous computer vision tracker trained with Deep Q-Networks in a custom environment.",
+      longDescription:
+        "Undergraduate thesis on teaching agents to track target objects in 2D video. A tracker agent optimizes its bounding-box position via reward signals, outperforming conventional rule-based tracking.",
+      technologies: ["Python", "PyTorch", "Reinforcement Learning", "Computer Vision", "Q-Learning"],
       featured: true
     },
     {
       id: "proj-3",
-      title: "Reinforcement Learning Object Tracking",
-      description: "An autonomous computer vision tracker trained using state-of-the-art Deep Q-Networks (DQN) in a custom virtual environment.",
-      longDescription: "Undergraduate thesis project centered on teaching artificial agents to dynamically track target objects in complex 2D videos. Implemented reinforcement learning algorithms (deep reinforcement learning) where the camera/tracker agent optimizes its bounding box position via reward signals, outperforming conventional rule-based visual tracking frameworks.",
-      technologies: ["Python", "PyTorch", "Reinforcement Learning", "Computer Vision", "OpenAI Gym", "Q-Learning"],
-      featured: true
+      title: "Line Follower Bot with PID Control",
+      description:
+        "An autonomous robotics platform using PID feedback loops for stable track following.",
+      longDescription:
+        "An autonomous line-follower robot using high-frequency PID feedback control, with calibrated infrared sensor arrays and motor drivers for smooth navigation around tight curves.",
+      technologies: ["C++", "PID Control", "Arduino", "Robotics", "Hardware"],
+      featured: false
     },
     {
       id: "proj-4",
       title: "COVID-19 Detection from CT Scans",
-      description: "A binary and multi-class medical diagnostic classifier built on custom convolutional neural networks for CT scan evaluation.",
-      longDescription: "Engineered and validated custom convolutional neural network (CNN) architectures to classify chest and brain CT scan images for rapid COVID-19 screening. Evaluated dataset class imbalances, applied strategic data augmentations, and analyzed model decisions using visual activation mapping.",
-      technologies: ["Python", "TensorFlow", "Keras", "Deep Learning", "CNN", "Medical Imaging"],
+      description:
+        "A medical diagnostic classifier built on custom CNNs for rapid CT scan screening.",
+      longDescription:
+        "Custom CNN architectures to classify chest and brain CT scans for COVID-19 screening, addressing class imbalance with augmentation and interpreting decisions via activation mapping.",
+      technologies: ["Python", "TensorFlow", "Keras", "CNN", "Medical Imaging"],
       featured: false
     }
   ],
+
   experiences: [
     {
       id: "exp-1",
       company: "Amazon",
-      role: "Software Development Engineer - I",
+      role: "Software Development Engineer",
       period: "Jan 2024 - Present",
-      location: "Bangalore, India · On-site",
+      location: "Bengaluru, India",
       description: [
-        "Drove $32M+ Annualized Cost Efficiency by designing and implementing a highly configurable, multi-zone package sorting functionality across over 150 delivery stations.",
-        "Engineered mission-critical, high-throughput backend services handling massive scale logistics and package routing pipelines.",
-        "Monitored, optimized, and maintained cloud infrastructure deployments utilizing AWS services, including AppConfig, CloudWatch, and auto-scaling microservices."
+        "Design and build high-throughput backend services for large-scale logistics automation, focused on correctness and availability under continuous production load.",
+        "Work on configurable systems that operate reliably across a large fleet of facilities.",
+        "Own services end to end — from design and implementation to deployment, monitoring, and operational health on AWS."
       ],
-      skillsUsed: ["Java", "Distributed Systems", "AWS", "Containerization", "Microservices"]
+      skillsUsed: ["Java", "Distributed Systems", "AWS", "Microservices", "System Design"]
     },
     {
       id: "exp-2",
-      company: "TCG CREST (Institute of Advancing Intelligence)",
-      role: "Research Assistant (Full-time)",
+      company: "TCG CREST — Institute of Advancing Intelligence",
+      role: "Research Assistant",
       period: "Jun 2023 - Jan 2024",
-      location: "Kolkata, West Bengal, India · On-site",
+      location: "Kolkata, India",
       description: [
-        "Worked as a full-time Research Assistant in the Institute of Advancing Intelligence (IAI) under the supervision of leading AI scientist Prof. Swagatam Das.",
-        "Formulated and implemented advanced mathematical optimization models and deep neural network designs.",
-        "Conducted research on machine learning algorithms, reinforcement learning, and graph-structured representation learning."
+        "Full-time research with Prof. Swagatam Das on deep learning and optimization.",
+        "Formulated mathematical optimization models and neural network designs for machine learning problems.",
+        "Studied reinforcement learning and graph-structured representation learning."
       ],
-      skillsUsed: ["Python", "Machine Learning", "Deep Learning", "Graph Neural Networks", "Optimization Algorithms"]
+      skillsUsed: ["Python", "Deep Learning", "Graph Neural Networks", "Optimization"]
     },
     {
       id: "exp-3",
-      company: "Indian Statistical Institute (ISI), Kolkata",
+      company: "Indian Statistical Institute (ISI)",
       role: "Research Assistant (Part-time)",
       period: "May 2023 - Jan 2024",
-      location: "Kolkata, West Bengal, India · On-site",
+      location: "Kolkata, India",
       description: [
-        "Conducted artificial intelligence research on complex Knowledge Graphs, semantic modeling, and reasoning algorithms.",
-        "Coauthored reports and structured research publications explaining node embeddings and path search strategies."
+        "Research on knowledge graphs, semantic modeling, and reasoning algorithms.",
+        "Explored node embeddings and path-search strategies over structured data."
       ],
       skillsUsed: ["Python", "Knowledge Graphs", "Machine Learning"]
     },
     {
       id: "exp-4",
-      company: "Jadavpur University",
-      role: "Undergraduate Student Researcher",
-      period: "Jul 2020 - Jul 2023",
-      location: "Kolkata, West Bengal, India · On-site",
-      description: [
-        "Conducted academic research and developed innovative biomedical machine learning projects.",
-        "Published high-impact papers in reputed medical informatics venues covering cardiovascular and cancer diagnosis.",
-        "Designed and tuned metaheuristic optimization algorithms (like Moth-Flame Optimization and Dragonfly Algorithm) to perform optimal feature selection on medical datasets."
-      ],
-      skillsUsed: ["Python", "TensorFlow", "MATLAB", "SQL", "Feature Selection", "Metaheuristics"]
-    },
-    {
-      id: "exp-5",
       company: "Toronto Metropolitan University",
       role: "Research Intern (MITACS)",
       period: "May 2022 - Aug 2022",
-      location: "Toronto, Ontario, Canada · Virtual",
+      location: "Toronto, Canada · Remote",
       description: [
-        "Conducted international research sponsored by the prestigious MITACS program at the Robotics, Mechatronics, and Automation Laboratory (RMAL).",
-        "Developed reinforcement learning agent models for robotic path tracking and 2D visual object tracking from video frames."
+        "MITACS-funded research at the Robotics, Mechatronics, and Automation Laboratory.",
+        "Developed reinforcement learning agents for robotic path tracking and 2D visual object tracking."
       ],
-      skillsUsed: ["Python", "PyTorch", "Reinforcement Learning", "Robotics", "Computer Vision"]
+      skillsUsed: ["Python", "PyTorch", "Reinforcement Learning", "Robotics"]
     },
     {
-      id: "exp-6",
-      company: "Edufeat",
-      role: "Subject Matter Expert",
-      period: "Apr 2021 - Jun 2023",
-      location: "Remote · Part-time",
+      id: "exp-5",
+      company: "Jadavpur University",
+      role: "Undergraduate Researcher",
+      period: "Jul 2020 - Jul 2023",
+      location: "Kolkata, India",
       description: [
-        "Delivered technical support and expert solutions in computer science, software engineering, and algorithmic problems.",
-        "Formulated clean, well-documented code examples and explanation guides for students in Python, C++, and Java."
+        "Biomedical machine learning research on cardiovascular and cancer diagnosis.",
+        "Designed metaheuristic optimization algorithms for feature selection on medical datasets, resulting in peer-reviewed publications."
       ],
-      skillsUsed: ["Problem Solving", "C++", "Python", "Java", "Data Structures"]
+      skillsUsed: ["Python", "TensorFlow", "MATLAB", "Feature Selection", "Metaheuristics"]
     }
   ],
+
   education: [
     {
       id: "edu-1",
       institution: "Jadavpur University",
-      degree: "Bachelor of Engineering - BE (Hons), Electronics and Telecommunication Engineering",
+      degree: "B.E. (Hons), Electronics & Telecommunication Engineering",
       period: "Jul 2019 - May 2023",
-      grade: "CGPA: 9/10 (86.12%)",
-      description: "Graduated with First Class Distinction with Honours. Completed undergraduate thesis on object tracking using reinforcement learning from 2D videos under the guidance of Prof. Amit Konar and Dr. Pratyusha Rakshit."
+      grade: "CGPA 9.0/10 · First Class with Distinction",
+      description:
+        "Undergraduate thesis on reinforcement learning for visual object tracking, advised by Prof. Amit Konar and Dr. Pratyusha Rakshit."
     },
     {
       id: "edu-2",
-      institution: "Talajuri Srimati High School",
-      degree: "Higher Secondary (10+2) in Science (WBCHSE)",
+      institution: "Talajuri Srimati High School (WBCHSE)",
+      degree: "Higher Secondary (10+2), Science",
       period: "2017 - 2019",
       grade: "92.6%",
-      description: "Studied physics, chemistry, mathematics, computer science, Bengali, and English. Graduated with exceptional marks."
+      description: "Physics, Chemistry, Mathematics, and Computer Science."
     }
   ],
+
   publications: [
     {
       id: "pub-1",
-      title: "Moth-Flame Optimization-Based Deep Feature Selection for Cardiovascular Disease Detection Using ECG Signal",
+      title:
+        "Moth-Flame Optimization-Based Deep Feature Selection for Cardiovascular Disease Detection Using ECG Signal",
       publisher: "CRC Press",
-      date: "Jun 20, 2022",
-      authors: "Arindam Majee, etc.",
-      abstract: "Designed a hybrid metaheuristic deep learning architecture that applies Moth-Flame Optimization to perform feature selection on ECG signal indicators, achieving highly accurate cardiovascular disease detection."
+      venue: "CRC Press (Book Chapter)",
+      date: "Jun 2022",
+      year: "2022",
+      type: "Book Chapter",
+      firstAuthor: true,
+      authors: "Arindam Majee, et al.",
+      abstract:
+        "A hybrid metaheuristic deep learning method that applies Moth-Flame Optimization to select informative features from ECG signals for accurate cardiovascular disease detection."
     },
     {
       id: "pub-2",
-      title: "Breast Cancer Detection from Thermal Images using Grunwald-Letnikov aided Dragonfly Algorithm based Deep Feature Selection Method",
-      publisher: "Computer in Biology and Medicine",
-      date: "Nov 14, 2021",
-      authors: "Arindam Majee, etc.",
-      abstract: "Formulated a deep feature selection mechanism utilizing a Grunwald-Letnikov fractional derivative-aided Dragonfly metaheuristic algorithm to identify malignancy markers in breast thermal scan datasets."
+      title:
+        "Breast Cancer Detection from Thermal Images Using a Grünwald–Letnikov-Aided Dragonfly Algorithm-Based Deep Feature Selection Method",
+      publisher: "Computers in Biology and Medicine",
+      venue: "Computers in Biology and Medicine (Journal)",
+      date: "Nov 2021",
+      year: "2021",
+      type: "Journal",
+      firstAuthor: true,
+      authors: "Arindam Majee, et al.",
+      abstract:
+        "A deep feature selection mechanism using a Grünwald–Letnikov fractional-derivative-aided Dragonfly metaheuristic to identify malignancy markers in breast thermal images."
     }
   ],
+
   awards: [
     {
       id: "aw-1",
       title: "JBNSTS Senior Research Scholarship",
       issuer: "Jagadish Bose National Science Talent Search",
       date: "Dec 2019",
-      description: "Highly competitive research scholarship awarded annually to the top ~60 meritorious science and engineering undergraduate students in the state of West Bengal. Associated with Jadavpur University."
+      description:
+        "Competitive research scholarship awarded to a small cohort of top science and engineering undergraduates in West Bengal."
     },
     {
       id: "aw-2",
       title: "JBNSTS Junior Scholar",
       issuer: "Jagadish Bose National Science Talent Search",
       date: "Dec 2017",
-      description: "Scholarship awarded for academic excellence during high school studies, following a state-wide talent selection assessment."
+      description: "Awarded for academic excellence following a state-wide talent selection assessment."
     }
   ],
-  socialLinks: [
-    { platform: "LinkedIn", url: "https://www.linkedin.com/in/arindammajee", label: "LinkedIn Connect" },
-    { platform: "GitHub", url: "https://github.com/arindammajee", label: "GitHub Profile" },
-    { platform: "Twitter", url: "https://twitter.com/arindammajee", label: "Twitter Feed" },
-    { platform: "Google Scholar", url: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Arindam+Majee", label: "Google Scholar" },
-    { platform: "ResearchGate", url: "https://www.researchgate.net/profile/Arindam-Majee", label: "ResearchGate Profile" },
-    { platform: "Email", url: "mailto:majeearindam06072002@gmail.com", label: "Send Email" }
+
+  writing: [
+    {
+      id: "wr-1",
+      title: "Writing, coming soon",
+      summary:
+        "I'm planning to write about efficient deep learning, lessons from taking ML into production, and notes from my research. Check back soon.",
+      comingSoon: true
+    }
   ],
+
+  socialLinks: [
+    { platform: "Google Scholar", url: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Arindam+Majee", label: "Google Scholar" },
+    { platform: "GitHub", url: "https://github.com/arindammajee", label: "GitHub Profile" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/arindammajee", label: "LinkedIn" },
+    { platform: "Email", url: "mailto:majeearindam06072002@gmail.com", label: "Email" }
+  ],
+
   hobbies: [
-    "Machine Learning Research",
-    "Competitive Programming",
-    "Robotics & Hardware Hacking",
-    "Writing Scientific Technical Articles",
-    "Exploring Advanced Distributed Architectures"
+    "Reading ML research",
+    "Competitive programming",
+    "Robotics & hardware tinkering",
+    "Technical writing"
   ]
 };

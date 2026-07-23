@@ -34,12 +34,25 @@ npm run preview    # Preview the production build locally
 npm run typecheck  # Type-check without emitting
 ```
 
+## Architecture
+
+The UI is composed of small, focused section components under
+[`src/components/`](src/components/) — `Hero`, `About`, `FeaturedWork`,
+`ResearchVision`, `Publications`, `Experience`, `Skills`, `Writing`, `Contact`,
+`Footer`, plus a `Navbar`. [`src/App.tsx`](src/App.tsx) is a thin shell that
+composes them and drives the nav scroll-spy. Shared building blocks live in
+`SectionHeader`, `Reveal` (subtle scroll animation), and `icons`.
+
 ## Editing Content
 
-All portfolio content — bio, skills, projects, experience, education, publications,
-awards and social links — is defined in [`src/data.ts`](src/data.ts) and typed by
-[`src/types.ts`](src/types.ts). Edit that file to update the site; no other changes
-are needed.
+All portfolio content — bio, skills, featured work, research areas, experience,
+education, publications, awards, writing, and social links — is defined in
+[`src/data.ts`](src/data.ts) and typed by [`src/types.ts`](src/types.ts). Edit that
+file to update the site; the components render whatever is in the data.
+
+**Resume:** the hero links to `/Arindam_Majee_Resume.pdf`. Drop your resume PDF at
+`public/Arindam_Majee_Resume.pdf` (or change `resumeUrl` in `data.ts`) so the link
+resolves.
 
 ## Deployment
 
