@@ -21,13 +21,13 @@ export default function Experience() {
                     aria-hidden="true"
                   ></span>
                   <div className="space-y-2">
-                    <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-widest block font-bold">
+                    <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">
                       {exp.period}
                       {exp.location ? ` · ${exp.location}` : ""}
                     </span>
                     <h3 className="font-display text-lg font-bold text-zinc-900 tracking-tight flex flex-wrap items-baseline gap-x-2">
                       <span>{exp.role}</span>
-                      <span className="text-sm font-normal text-zinc-400">@ {exp.company}</span>
+                      <span className="text-sm font-normal text-zinc-500">@ {exp.company}</span>
                     </h3>
                     <ul className="space-y-1.5">
                       {exp.description.map((bullet, idx) => (
@@ -61,7 +61,7 @@ export default function Experience() {
             {portfolioData.education.map((edu, i) => (
               <Reveal key={edu.id} delay={i * 0.05}>
                 <div className="bg-zinc-50 border border-zinc-200 p-6 rounded-2xl shadow-sm space-y-2">
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest block font-bold">
+                  <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">
                     {edu.period}
                   </span>
                   <h3 className="font-display font-bold text-base text-zinc-900 tracking-tight leading-snug">

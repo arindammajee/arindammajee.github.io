@@ -1,11 +1,4 @@
-export interface Skill {
-  name: string;
-  category: "Frontend" | "Backend" | "Tools & Others" | "Design";
-  level: "Beginner" | "Intermediate" | "Advanced" | "Expert";
-  icon?: string;
-}
-
-// Skills grouped for the redesigned, category-based Skills section.
+// Skills grouped for the category-based Skills section.
 export interface SkillGroup {
   category: string;
   items: string[];
@@ -19,6 +12,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  paperUrl?: string;
   imageUrl?: string;
   featured: boolean;
 }
@@ -70,13 +64,22 @@ export interface Publication {
   year: string;
   type?: "Journal" | "Conference" | "Book Chapter" | "Preprint";
   firstAuthor?: boolean;
+  citations?: number;
   abstract?: string;
   links?: {
     pdf?: string;
     doi?: string;
+    arxiv?: string;
     bibtex?: string;
     code?: string;
   };
+}
+
+// A single headline metric shown in the hero signal card.
+export interface HeroStat {
+  label: string;
+  value: string;
+  detail?: string;
 }
 
 export interface Award {
@@ -85,17 +88,6 @@ export interface Award {
   issuer: string;
   date: string;
   description?: string;
-}
-
-// A writing entry. `comingSoon` renders the placeholder state for the
-// Writing section until real articles are published.
-export interface WritingEntry {
-  id: string;
-  title: string;
-  summary: string;
-  date?: string;
-  url?: string;
-  comingSoon?: boolean;
 }
 
 export interface SocialLink {
@@ -115,7 +107,7 @@ export interface Profile {
   email: string;
   location: string;
   resumeUrl?: string;
-  skills: Skill[];
+  heroStats: HeroStat[];
   skillGroups: SkillGroup[];
   featuredWork: FeaturedWork[];
   researchAreas: ResearchArea[];
@@ -125,7 +117,5 @@ export interface Profile {
   education: Education[];
   publications?: Publication[];
   awards?: Award[];
-  writing: WritingEntry[];
   socialLinks: SocialLink[];
-  hobbies: string[];
 }

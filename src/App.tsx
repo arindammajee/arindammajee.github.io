@@ -5,9 +5,9 @@ import About from "./components/About";
 import FeaturedWork from "./components/FeaturedWork";
 import ResearchVision from "./components/ResearchVision";
 import Publications from "./components/Publications";
+import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
-import Writing from "./components/Writing";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -18,9 +18,9 @@ const SPY_IDS = [
   "work",
   "research",
   "publications",
+  "projects",
   "experience",
   "skills",
-  "writing",
   "contact"
 ];
 
@@ -64,9 +64,9 @@ export default function App() {
         <FeaturedWork />
         <ResearchVision />
         <Publications />
+        <Projects />
         <Experience />
         <Skills />
-        <Writing />
         <Contact />
       </main>
 

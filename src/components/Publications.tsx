@@ -17,7 +17,7 @@ export default function Publications() {
             icon={BookOpen}
             eyebrow="Research"
             title="Publications"
-            lead="Peer-reviewed work on deep learning for medical diagnosis. Author name in bold."
+            lead="Peer-reviewed and preprint work on efficient, explainable deep learning — ~190 citations, h-index 4. Author name in bold."
           />
 
           <ol className="space-y-5">
@@ -35,7 +35,12 @@ export default function Publications() {
                         {pub.type}
                       </span>
                     )}
-                    <span className="text-[10px] font-mono text-zinc-400 font-semibold">{pub.year}</span>
+                    <span className="text-[11px] font-mono text-zinc-500 font-semibold">{pub.year}</span>
+                    {typeof pub.citations === "number" && pub.citations > 0 && (
+                      <span className="text-[10px] font-mono text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded-full border border-zinc-200 font-semibold">
+                        {pub.citations} citations
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="font-display font-bold text-base text-zinc-900 tracking-tight leading-snug">
@@ -63,14 +68,20 @@ export default function Publications() {
                     </p>
                   )}
 
-                  {pub.links && (pub.links.pdf || pub.links.doi || pub.links.bibtex || pub.links.code) && (
-                    <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-semibold text-zinc-700">
-                      {pub.links.pdf && <PubLink href={pub.links.pdf} icon={FileText} label="PDF" />}
-                      {pub.links.doi && <PubLink href={pub.links.doi} icon={Link2} label="DOI" />}
-                      {pub.links.bibtex && <PubLink href={pub.links.bibtex} icon={Quote} label="BibTeX" />}
-                      {pub.links.code && <PubLink href={pub.links.code} icon={Code2} label="Code" />}
-                    </div>
-                  )}
+                  {pub.links &&
+                    (pub.links.pdf ||
+                      pub.links.doi ||
+                      pub.links.arxiv ||
+                      pub.links.bibtex ||
+                      pub.links.code) && (
+                      <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-semibold text-zinc-700">
+                        {pub.links.pdf && <PubLink href={pub.links.pdf} icon={FileText} label="PDF" />}
+                        {pub.links.doi && <PubLink href={pub.links.doi} icon={Link2} label="DOI" />}
+                        {pub.links.arxiv && <PubLink href={pub.links.arxiv} icon={FileText} label="arXiv" />}
+                        {pub.links.bibtex && <PubLink href={pub.links.bibtex} icon={Quote} label="BibTeX" />}
+                        {pub.links.code && <PubLink href={pub.links.code} icon={Code2} label="Code" />}
+                      </div>
+                    )}
                 </li>
               </Reveal>
             ))}

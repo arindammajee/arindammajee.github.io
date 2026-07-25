@@ -19,7 +19,7 @@ export default function Skills() {
           {portfolioData.skillGroups.map((group, i) => (
             <Reveal key={group.category} delay={i * 0.04}>
               <div className="h-full bg-white border border-zinc-200 p-6 rounded-2xl shadow-sm">
-                <h3 className="font-mono font-semibold text-xs tracking-tight uppercase text-zinc-400 mb-4">
+                <h3 className="font-mono font-semibold text-xs tracking-tight uppercase text-zinc-500 mb-4">
                   {group.category}
                 </h3>
                 <ul className="flex flex-wrap gap-2">

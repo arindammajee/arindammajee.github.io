@@ -3,7 +3,14 @@ import { Mail, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data";
 
-const SECTIONS = ["about", "work", "research", "publications", "experience", "contact"];
+const SECTIONS = [
+  "about",
+  "work",
+  "research",
+  "publications",
+  "projects",
+  "experience"
+];
 
 export default function Navbar({ activeSection }: { activeSection: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

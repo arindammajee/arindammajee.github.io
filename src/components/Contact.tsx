@@ -27,7 +27,7 @@ export default function Contact() {
                 <Mail className="w-5 h-5" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-zinc-400 uppercase font-mono tracking-wider">Email</h3>
+                <h3 className="text-xs font-bold text-zinc-500 uppercase font-mono tracking-wider">Email</h3>
                 <span className="text-sm font-semibold text-zinc-800 break-all">{portfolioData.email}</span>
               </div>
             </a>
@@ -37,7 +37,7 @@ export default function Contact() {
                 <MapPin className="w-5 h-5" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xs font-bold text-zinc-400 uppercase font-mono tracking-wider">Location</h3>
+                <h3 className="text-xs font-bold text-zinc-500 uppercase font-mono tracking-wider">Location</h3>
                 <p className="text-sm font-semibold text-zinc-800">{portfolioData.location}</p>
               </div>
             </div>

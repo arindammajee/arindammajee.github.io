@@ -8,7 +8,7 @@ export default function About() {
       <div className="max-w-3xl mx-auto px-6">
         <Reveal className="space-y-6">
           <div className="space-y-3">
-            <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest font-semibold">
+            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest font-semibold">
               About
             </span>
             <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">
