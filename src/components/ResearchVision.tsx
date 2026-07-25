@@ -6,12 +6,12 @@ import Reveal from "./Reveal";
 
 export default function ResearchVision() {
   return (
-    <section id="research" className="py-16 md:py-24 border-b border-zinc-200 bg-white">
+    <section id="research" className="py-16 md:py-24 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Narrative */}
         <div className="lg:col-span-6 space-y-6 lg:sticky lg:top-24">
           <SectionHeader icon={Compass} eyebrow="Research Vision" title="What I Want to Build" />
-          <p className="text-zinc-700 text-base leading-relaxed">{portfolioData.researchStatement}</p>
+          <p className="text-zinc-700 dark:text-zinc-300 text-base leading-relaxed">{portfolioData.researchStatement}</p>
         </div>
 
         {/* Areas */}
@@ -19,11 +19,11 @@ export default function ResearchVision() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {portfolioData.researchAreas.map((area, i) => (
               <Reveal key={area.id} delay={i * 0.04}>
-                <li className="h-full bg-zinc-50 border border-zinc-200 rounded-xl p-5 hover:border-zinc-300 transition">
-                  <h3 className="font-display font-semibold text-sm text-zinc-900 tracking-tight">
+                <li className="h-full bg-zinc-50 border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 rounded-xl p-5 hover:border-zinc-300 dark:hover:border-zinc-700 transition">
+                  <h3 className="font-display font-semibold text-sm text-zinc-900 dark:text-zinc-100 tracking-tight">
                     {area.title}
                   </h3>
-                  <p className="text-zinc-600 text-xs leading-relaxed mt-1.5">{area.description}</p>
+                  <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed mt-1.5">{area.description}</p>
                 </li>
               </Reveal>
             ))}

@@ -6,33 +6,33 @@ import Reveal from "./Reveal";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-16 md:py-24 border-b border-zinc-200 bg-white">
+    <section id="experience" className="py-16 md:py-24 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
         {/* Work timeline */}
         <div className="lg:col-span-7 space-y-8">
           <SectionHeader icon={Briefcase} eyebrow="Journey" title="Experience" />
 
-          <div className="relative border-l-2 border-zinc-200 pl-6 space-y-8 ml-3">
+          <div className="relative border-l-2 border-zinc-200 dark:border-zinc-800 pl-6 space-y-8 ml-3">
             {portfolioData.experiences.map((exp, i) => (
               <Reveal key={exp.id} delay={i * 0.04}>
                 <div className="relative group">
                   <span
-                    className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-zinc-900 border-4 border-white transition-colors group-hover:bg-zinc-600"
+                    className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-zinc-900 border-4 border-white dark:bg-zinc-100 dark:border-zinc-950 transition-colors group-hover:bg-zinc-600 dark:group-hover:bg-zinc-400"
                     aria-hidden="true"
                   ></span>
                   <div className="space-y-2">
-                    <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">
+                    <span className="text-[11px] font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest block font-bold">
                       {exp.period}
                       {exp.location ? ` · ${exp.location}` : ""}
                     </span>
-                    <h3 className="font-display text-lg font-bold text-zinc-900 tracking-tight flex flex-wrap items-baseline gap-x-2">
+                    <h3 className="font-display text-lg font-bold text-zinc-900 dark:text-zinc-50 tracking-tight flex flex-wrap items-baseline gap-x-2">
                       <span>{exp.role}</span>
-                      <span className="text-sm font-normal text-zinc-500">@ {exp.company}</span>
+                      <span className="text-sm font-normal text-zinc-500 dark:text-zinc-400">@ {exp.company}</span>
                     </h3>
                     <ul className="space-y-1.5">
                       {exp.description.map((bullet, idx) => (
-                        <li key={idx} className="text-zinc-600 text-sm leading-relaxed flex items-start gap-2">
-                          <span className="text-zinc-400 shrink-0 mt-1.5" aria-hidden="true">•</span>
+                        <li key={idx} className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed flex items-start gap-2">
+                          <span className="text-zinc-400 dark:text-zinc-600 shrink-0 mt-1.5" aria-hidden="true">•</span>
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -41,7 +41,7 @@ export default function Experience() {
                       {exp.skillsUsed.map((skill) => (
                         <span
                           key={skill}
-                          className="bg-zinc-100 text-zinc-700 px-2 py-0.5 rounded-full text-[10px] font-mono border border-zinc-200"
+                          className="bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 px-2 py-0.5 rounded-full text-[10px] font-mono border border-zinc-200 dark:border-zinc-700"
                         >
                           {skill}
                         </span>
@@ -60,21 +60,21 @@ export default function Experience() {
           <div className="space-y-5">
             {portfolioData.education.map((edu, i) => (
               <Reveal key={edu.id} delay={i * 0.05}>
-                <div className="bg-zinc-50 border border-zinc-200 p-6 rounded-2xl shadow-sm space-y-2">
-                  <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest block font-bold">
+                <div className="bg-zinc-50 border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 p-6 rounded-2xl shadow-sm space-y-2">
+                  <span className="text-[11px] font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest block font-bold">
                     {edu.period}
                   </span>
-                  <h3 className="font-display font-bold text-base text-zinc-900 tracking-tight leading-snug">
+                  <h3 className="font-display font-bold text-base text-zinc-900 dark:text-zinc-50 tracking-tight leading-snug">
                     {edu.degree}
                   </h3>
-                  <p className="text-sm font-semibold text-zinc-700">{edu.institution}</p>
+                  <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">{edu.institution}</p>
                   {edu.grade && (
-                    <span className="inline-block bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-md text-[10px] font-mono font-bold">
+                    <span className="inline-block bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 px-2 py-0.5 rounded-md text-[10px] font-mono font-bold">
                       {edu.grade}
                     </span>
                   )}
                   {edu.description && (
-                    <p className="text-zinc-600 text-xs leading-relaxed border-t border-zinc-100 pt-2.5">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-xs leading-relaxed border-t border-zinc-100 dark:border-zinc-800 pt-2.5">
                       {edu.description}
                     </p>
                   )}

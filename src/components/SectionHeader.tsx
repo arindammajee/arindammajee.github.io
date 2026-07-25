@@ -19,14 +19,14 @@ export default function SectionHeader({
 }) {
   return (
     <div className="space-y-3">
-      <div className="flex items-center gap-2 text-zinc-500 font-mono text-xs uppercase tracking-wider font-semibold">
-        <Icon className="w-4 h-4 text-zinc-400" aria-hidden="true" />
+      <div className="flex items-center gap-2 text-zinc-500 dark:text-zinc-400 font-mono text-xs uppercase tracking-wider font-semibold">
+        <Icon className="w-4 h-4 text-zinc-400 dark:text-zinc-500" aria-hidden="true" />
         <span>{eyebrow}</span>
       </div>
-      <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">
+      <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
         {title}
       </h2>
-      {lead && <p className="text-sm text-zinc-500 max-w-2xl leading-relaxed">{lead}</p>}
+      {lead && <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-2xl leading-relaxed">{lead}</p>}
     </div>
   );
 }

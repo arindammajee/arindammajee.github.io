@@ -279,7 +279,7 @@ export const portfolioData: Profile = {
       institution: "Jadavpur University",
       degree: "B.E. (Hons), Electronics & Telecommunication Engineering",
       period: "Jul 2019 - May 2023",
-      grade: "CGPA 9.0/10 · First Class with Distinction",
+      grade: "CGPA 9.0/10 · First Class with Distinction (Hons)",
       description:
         "Undergraduate thesis on reinforcement learning for visual object tracking, advised by Prof. Amit Konar and Dr. Pratyusha Rakshit."
     },

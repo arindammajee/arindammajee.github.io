@@ -9,21 +9,21 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative py-16 md:py-24 overflow-hidden border-b border-zinc-200 bg-grid-pattern"
+      className="relative py-16 md:py-24 overflow-hidden border-b border-zinc-200 dark:border-zinc-800 bg-grid-pattern"
     >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Text */}
         <div className="lg:col-span-7 space-y-6 text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100 text-xs font-semibold">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300 rounded-full border border-emerald-100 dark:border-emerald-900/60 text-xs font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
             <span>Software Engineer · AI Researcher</span>
           </div>
 
           <div className="space-y-4">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 leading-[1.1]">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 leading-[1.1]">
               {portfolioData.headline}
             </h1>
-            <p className="text-zinc-600 max-w-xl text-base sm:text-lg leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 max-w-xl text-base sm:text-lg leading-relaxed">
               {portfolioData.subtitle}
             </p>
           </div>
@@ -35,15 +35,15 @@ export default function Hero() {
                 href={portfolioData.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 py-3 bg-zinc-900 hover:bg-zinc-800 text-white rounded-xl text-sm font-semibold tracking-tight transition flex items-center gap-2 shadow-md"
+                className="px-5 py-3 bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-zinc-50 dark:hover:bg-zinc-200 dark:text-zinc-900 rounded-xl text-sm font-semibold tracking-tight transition flex items-center gap-2 shadow-md"
               >
-                <FileText className="w-4 h-4 text-zinc-300" aria-hidden="true" />
+                <FileText className="w-4 h-4 text-zinc-300 dark:text-zinc-500" aria-hidden="true" />
                 <span>Resume</span>
               </a>
             )}
             <button
               onClick={() => go("work")}
-              className="px-5 py-3 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-200 rounded-xl text-sm font-semibold tracking-tight transition flex items-center gap-2 cursor-pointer"
+              className="px-5 py-3 bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-100 dark:border-zinc-700 rounded-xl text-sm font-semibold tracking-tight transition flex items-center gap-2 cursor-pointer"
             >
               <span>View Work</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -51,8 +51,8 @@ export default function Hero() {
           </div>
 
           {/* Social / profile links */}
-          <div className="flex items-center gap-4 pt-4 border-t border-zinc-200 max-w-lg">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Find me:</span>
+          <div className="flex items-center gap-4 pt-4 border-t border-zinc-200 dark:border-zinc-800 max-w-lg">
+            <span className="text-xs font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest">Find me:</span>
             <div className="flex items-center gap-2">
               {portfolioData.socialLinks.map((link) => {
                 const Icon = socialIcon(link.platform);
@@ -62,7 +62,7 @@ export default function Hero() {
                     href={link.url}
                     target={link.platform !== "Email" ? "_blank" : undefined}
                     rel="noreferrer"
-                    className="p-2 text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition"
+                    className="p-2 text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition"
                     aria-label={link.label}
                     title={link.label}
                   >

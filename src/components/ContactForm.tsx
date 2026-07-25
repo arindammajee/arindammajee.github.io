@@ -47,10 +47,10 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-zinc-50 border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-sm outline-none focus:border-zinc-400 focus:bg-white transition";
+    "w-full bg-zinc-50 border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-sm outline-none focus:border-zinc-400 focus:bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-zinc-500 dark:focus:bg-zinc-800 transition";
 
   return (
-    <div className="bg-white border border-zinc-200 rounded-2xl shadow-xl p-6 lg:p-8">
+    <div className="bg-white border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 rounded-2xl shadow-xl p-6 lg:p-8">
       {isSuccess ? (
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
@@ -58,20 +58,20 @@ export default function ContactForm() {
           className="text-center py-10 space-y-4"
           role="status"
         >
-          <div className="mx-auto w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center border border-emerald-200">
+          <div className="mx-auto w-16 h-16 bg-emerald-100 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-400 rounded-full flex items-center justify-center border border-emerald-200 dark:border-emerald-900/60">
             <CheckCircle className="w-8 h-8" aria-hidden="true" />
           </div>
           <div className="space-y-2">
-            <h3 className="text-xl font-bold text-zinc-900 tracking-tight">Almost there!</h3>
-            <p className="text-sm text-zinc-600 max-w-md mx-auto leading-relaxed">
+            <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">Almost there!</h3>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-md mx-auto leading-relaxed">
               Your email client should have opened with the message pre-filled and addressed to{" "}
-              <span className="font-semibold text-zinc-800">{portfolioData.email}</span>. Just hit
+              <span className="font-semibold text-zinc-800 dark:text-zinc-200">{portfolioData.email}</span>. Just hit
               send! If nothing opened, you can email me directly at that address.
             </p>
           </div>
           <button
             onClick={() => setIsSuccess(false)}
-            className="px-5 py-2.5 bg-zinc-900 text-white rounded-xl hover:bg-zinc-800 transition text-sm font-medium cursor-pointer"
+            className="px-5 py-2.5 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition text-sm font-medium cursor-pointer"
           >
             Write Another Message
           </button>
@@ -79,15 +79,15 @@ export default function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5" noValidate>
           <div className="space-y-1">
-            <h3 className="text-lg font-bold text-zinc-900 tracking-tight">Send a message</h3>
-            <p className="text-xs text-zinc-500 leading-normal">
+            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">Send a message</h3>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-normal">
               Have a role, an idea, or a research question? I'd love to hear from you.
             </p>
           </div>
 
           {error && (
             <div
-              className="p-3 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-xs font-medium"
+              className="p-3 bg-rose-50 border border-rose-200 text-rose-800 dark:bg-rose-950/40 dark:border-rose-900/60 dark:text-rose-300 rounded-xl text-xs font-medium"
               role="alert"
             >
               {error}
@@ -97,7 +97,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Name */}
             <div className="space-y-1.5">
-              <label htmlFor="name" className="block text-xs font-semibold text-zinc-700">
+              <label htmlFor="name" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                 Your Name <span className="text-rose-500">*</span>
               </label>
               <div className="relative">
@@ -119,7 +119,7 @@ export default function ContactForm() {
 
             {/* Email */}
             <div className="space-y-1.5">
-              <label htmlFor="email" className="block text-xs font-semibold text-zinc-700">
+              <label htmlFor="email" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300">
                 Your Email <span className="text-rose-500">*</span>
               </label>
               <div className="relative">
@@ -142,7 +142,7 @@ export default function ContactForm() {
 
           {/* Subject */}
           <div className="space-y-1.5">
-            <label htmlFor="subject" className="block text-xs font-semibold text-zinc-700">
+            <label htmlFor="subject" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300">
               Subject
             </label>
             <div className="relative">
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
           {/* Message */}
           <div className="space-y-1.5">
-            <label htmlFor="message" className="block text-xs font-semibold text-zinc-700">
+            <label htmlFor="message" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300">
               Message <span className="text-rose-500">*</span>
             </label>
             <div className="relative">
@@ -187,7 +187,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-zinc-900 text-white rounded-xl hover:bg-zinc-800 transition font-medium text-sm disabled:opacity-50 cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 px-5 py-3 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 rounded-xl hover:bg-zinc-800 dark:hover:bg-zinc-200 transition font-medium text-sm disabled:opacity-50 cursor-pointer"
           >
             {isSubmitting ? (
               <>
