@@ -1,12 +1,14 @@
 import React from "react";
 import { BookOpen, Trophy, FileText, Link2, Code2, Quote } from "lucide-react";
 import { portfolioData } from "../data";
+import scholar from "../data/scholar.json";
 import SectionHeader from "./SectionHeader";
 import Reveal from "./Reveal";
 
 export default function Publications() {
   const pubs = portfolioData.publications ?? [];
   const awards = portfolioData.awards ?? [];
+  const citationsLabel = `${Math.floor(scholar.citations / 10) * 10}+`;
 
   return (
     <section id="publications" className="py-16 md:py-24 border-b border-zinc-200 bg-zinc-50">
@@ -17,7 +19,7 @@ export default function Publications() {
             icon={BookOpen}
             eyebrow="Research"
             title="Publications"
-            lead="Peer-reviewed and preprint work on efficient, explainable deep learning — ~190 citations, h-index 4. Author name in bold."
+            lead={`Peer-reviewed and preprint work on efficient, explainable deep learning — ${citationsLabel} citations, h-index ${scholar.hindex}. Author name in bold.`}
           />
 
           <ol className="space-y-5">

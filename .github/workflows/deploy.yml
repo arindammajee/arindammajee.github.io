@@ -5,6 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Nightly rebuild to refresh Google Scholar metrics at build time.
+  schedule:
+    - cron: "0 2 * * *"
 
 # Allow the GITHUB_TOKEN to deploy to GitHub Pages.
 permissions:
@@ -28,6 +31,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # Fail-safe: if Scholar blocks the CI runner, the script keeps the
+      # committed src/data/scholar.json and exits 0 so the build still deploys.
+      - name: Refresh Google Scholar metrics
+        run: |
+          pip install scholarly
+          python scripts/update_citations.py
 
       - name: Install dependencies
         run: npm install

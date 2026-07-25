@@ -1,4 +1,12 @@
 import { Profile } from "./types";
+import scholar from "./data/scholar.json";
+
+// Aggregate Scholar metrics are refreshed at build time by
+// scripts/update_citations.py (see .github/workflows/deploy.yml). The
+// committed scholar.json is the fallback when a CI fetch is blocked.
+// Per-paper citation counts below stay static (they need much heavier
+// scraping and are more likely to trip Scholar's bot protection).
+const citationsLabel = `${Math.floor(scholar.citations / 10) * 10}+`;
 
 export const portfolioData: Profile = {
   name: "Arindam Majee",
@@ -9,7 +17,7 @@ export const portfolioData: Profile = {
   // Hero
   headline: "I turn research prototypes into ML systems that run in production.",
   subtitle:
-    "Software Development Engineer at Amazon building high-throughput backend systems, and a published ML researcher (h-index 4, ~190 citations) working on efficient, deployable deep learning for medical imaging and beyond.",
+    `Software Development Engineer at Amazon building high-throughput backend systems, and a published ML researcher (h-index ${scholar.hindex}, ${citationsLabel} citations) working on efficient, deployable deep learning for medical imaging and beyond.`,
 
   // About — a concise personal story, not a résumé restatement.
   aboutMe:
@@ -23,8 +31,8 @@ export const portfolioData: Profile = {
 
   // Hero signal card — real, verifiable metrics (Google Scholar).
   heroStats: [
-    { label: "Citations", value: "190+", detail: "Google Scholar" },
-    { label: "h-index", value: "4", detail: "i10-index 4" },
+    { label: "Citations", value: citationsLabel, detail: "Google Scholar" },
+    { label: "h-index", value: String(scholar.hindex), detail: `i10-index ${scholar.i10index}` },
     { label: "Publications", value: "6", detail: "4 as first author" },
     { label: "Since", value: "2024", detail: "SDE at Amazon" }
   ],
