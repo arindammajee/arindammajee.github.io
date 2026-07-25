@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="'Space Grotesk','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="18%" cy="22%" r="80%">
+      <stop offset="0%" stop-color="#1c1c22"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#09090b"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Monogram -->
+  <g>
+    <rect x="80" y="72" width="72" height="72" rx="18" fill="#fafafa"/>
+    <text x="116" y="122" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace"
+      font-size="34" font-weight="700" fill="#09090b">AM</text>
+  </g>
+
+  <!-- Status pill -->
+  <g>
+    <rect x="170" y="88" width="336" height="40" rx="20" fill="#064e3b"/>
+    <circle cx="196" cy="108" r="5" fill="#34d399"/>
+    <text x="214" y="115" font-size="18" font-weight="600" letter-spacing="0.5" fill="#a7f3d0">
+      ML Engineer · AI Researcher
+    </text>
+  </g>
+
+  <!-- Name -->
+  <text x="80" y="290" font-size="104" font-weight="700" letter-spacing="-2" fill="#ffffff">Arindam Majee</text>
+
+  <!-- Headline -->
+  <text x="82" y="372" font-size="40" font-weight="500" fill="#d4d4d8">
+    I turn research prototypes into ML systems
+  </text>
+  <text x="82" y="424" font-size="40" font-weight="500" fill="#d4d4d8">
+    that run in <tspan fill="#34d399" font-weight="700">production</tspan>.
+  </text>
+
+  <!-- Divider -->
+  <rect x="82" y="470" width="1036" height="1" fill="#27272a"/>
+
+  <!-- Credential stats -->
+  <g font-family="'Space Grotesk',sans-serif">
+    <text x="82" y="540" font-size="52" font-weight="700" fill="#ffffff">190+</text>
+    <text x="84" y="572" font-size="20" font-weight="500" fill="#a1a1aa">Citations</text>
+
+    <text x="320" y="540" font-size="52" font-weight="700" fill="#ffffff">h-4</text>
+    <text x="322" y="572" font-size="20" font-weight="500" fill="#a1a1aa">h-index</text>
+
+    <text x="520" y="540" font-size="52" font-weight="700" fill="#ffffff">IJCNN</text>
+    <text x="522" y="572" font-size="20" font-weight="500" fill="#a1a1aa">2024 · first author</text>
+
+    <text x="900" y="540" font-size="52" font-weight="700" fill="#ffffff">Amazon</text>
+    <text x="902" y="572" font-size="20" font-weight="500" fill="#a1a1aa">SDE</text>
+  </g>
+
+  <!-- URL -->
+  <text x="1118" y="118" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,monospace"
+    font-size="22" font-weight="500" fill="#71717a">arindammajee.com</text>
+</svg>
